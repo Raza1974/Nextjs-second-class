@@ -3,21 +3,34 @@
 @tailwind utilities;
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.homeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.childContainer {
+  width: 600px ;
+  height: 250px;
+  margin: 20px;
+  font-size: 40px;
+  font-weight: 900;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.pinkColor {
+  color: pink; /* Ensure this is correctly applied */
 }
+.childContainer {
+  position: relative; /* Ensure the parent is positioned */
+}
+
+.profile-pic {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;  /* Absolute positioning */
+  top: 10px;  /* Adjust this value as needed */
+  right: 10px; /* Adjust this value as needed */
+}
+
